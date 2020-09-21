@@ -1,0 +1,43 @@
+.container-title-application-message {
+  background: $lightBlue;
+  border: 1px solid $black;
+  position: relative;
+  padding: 20px;
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    &:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 15px;
+      background: #000;
+      position: absolute;
+      left: 7px;
+      top: 0px;
+      transform: rotate(-45deg);
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 15px;
+      background: #000;
+      position: absolute;
+      left: 7px;
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-title-application-message {
+    padding: 10px;
+  }
+}

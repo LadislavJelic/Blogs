@@ -1,0 +1,223 @@
+.Blog {
+  padding: 15px;
+  border: 1px solid $black;
+  margin: 0 0 20px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-of-type(2n + 1) {
+    background: $lightBlue;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .image-published {
+      display: flex;
+
+      .title-posted-date {
+        padding: 0 0 0 10px;
+        .title {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+
+      .button {
+        cursor: pointer;
+        color: #fff;
+        background: $black;
+        height: 22px;
+        line-height: 22px;
+        font-size: 12px;
+        width: 70px;
+        text-align: center;
+        border-radius: 4px;
+        &:first-child {
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+    .placeholder-80x80 {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border: 1px solid $black;
+      background: #fff;
+      min-width: 80px;
+
+      .dimension {
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        width: 60px;
+        text-align: center;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100px;
+        background: #000;
+        position: absolute;
+        left: 39.5px;
+        top: -10px;
+        transform: rotate(45deg);
+      }
+      &:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100px;
+        background: #000;
+        position: absolute;
+        left: 39.5px;
+        top: -10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .section {
+    .description {
+      margin: 10px 0 20px 0;
+    }
+    .placeholder-100x100 {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 1px solid $black;
+      background: #fff;
+
+      .dimension {
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        width: 60px;
+        text-align: center;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 120px;
+        background: #000;
+        position: absolute;
+        left: 49.5px;
+        top: -10px;
+        transform: rotate(45deg);
+      }
+      &:before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 120px;
+        background: #000;
+        position: absolute;
+        left: 49.5px;
+        top: -10px;
+        transform: rotate(-45deg);
+      }
+    }
+    .wrapper-3-placeholders {
+      display: flex;
+      justify-content: space-between;
+      width: 330px;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Blog {
+    padding: 10px;
+
+    .header {
+      .placeholder-80x80 {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+
+        .dimension {
+          width: 56px;
+        }
+
+        &:before {
+          height: 70px;
+          left: 29.5px;
+          top: -5px;
+        }
+        &:after {
+          height: 70px;
+          left: 29.5px;
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Blog {
+    .header {
+      display: block;
+      .image-published .title-posted-date .title {
+        font-size: 12px;
+      }
+      .image-published .posted-date {
+        font-size: 12px;
+      }
+      .buttons {
+        margin: 10px 0 0 auto;
+        width: 112px;
+        .button {
+          width: 50px;
+          height: 18px;
+          line-height: 18px;
+          font-size: 10px;
+          &:first-child {
+            margin: 0 12px 0 0;
+          }
+        }
+      }
+    }
+    .section {
+      display: block;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      .wrapper-3-placeholders {
+        width: 100%;
+        max-width: 250px;
+        .placeholder-100x100 {
+          width: 70px;
+          height: 70px;
+
+          &:before {
+            height: 80px;
+            left: 34.5px;
+            top: -5px;
+          }
+
+          &:after {
+            height: 80px;
+            left: 34.5px;
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+}
